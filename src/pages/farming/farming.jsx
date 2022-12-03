@@ -9,7 +9,7 @@ export const Farming = () => {
   const { chainId } = useEthers()
 
   const isMaticEnabled = () => {
-    return chainId === ChainId.Polygon
+    return chainId === ChainId.AvaxFuji
   }
 
   const isEthereumEnabled = () => {
@@ -17,7 +17,7 @@ export const Farming = () => {
   }
 
   return (
-    <MainLayout title="Farming" pageSupportedChains={[1, 137]}>
+    <MainLayout title="Farming" pageSupportedChains={[1, 43113]}>
       <CardsContainer>
         {isEthereumEnabled() && <FarmingView />}
         {isMaticEnabled() && <MaticFarming />}
