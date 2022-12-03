@@ -4,10 +4,11 @@
     background:  #ffffff;
     padding: 25px 25px;
     .logo{
-        margin-bottom: 100px;
+        margin-bottom: 0px;
         img{
-            height: 35px;
-            width: 101.35px;
+            height: 20px;
+            width: 60px;
+            justify-content: center;
         }
         p{
             display: none;
@@ -44,7 +45,7 @@
         z-index: 10;
 
         .logo{
-            display: flex;
+            display: grid;
             justify-content: space-between;
             align-items: center;
             p{

@@ -4,19 +4,19 @@
     "name": "Mainnet",
     "fixedStakingContracts": [
       {
-        "address": "0xff6d784d5938cb3980dce79bbacec53987d527d8",
+        "address": "0x000000000000000000000000000000000000dEaD",
         "APY": "20.2705"
       },
       {
-        "address": "0x63aE7Ad4BC155561442207bB4a89a3FD697068D1",
+        "address": "0x000000000000000000000000000000000000dEaD",
         "APY": "30.2260"
       },
       {
-        "address": "0xa295338aB1a4A648D3578Da6940acfdEEFFD9B6F",
+        "address": "0x000000000000000000000000000000000000dEaD",
         "APY": "52.0807"
       }
     ],
-    "tokenContract": "0xCE3f6f6672616c39D8B6858F8DAC9902eCa42C84",
+    "tokenContract": "0x000000000000000000000000000000000000dEaD",
     "bridgeContract": "0xFF01b75f2c155dBDA36E68eB6557DEE8d36D6A99",
     "params": {
       "chainId": "0x1"
@@ -52,34 +52,34 @@
       "blockExplorerUrls": ["https://polygonscan.com"]
     }
   },
-  "56": {
-    "blockExplorer": "https://www.bscscan.com/tx/",
-    "name": "Binance",
+  "43113": {
+    "blockExplorer": "https://testnet.snowtrace.io/",
+    "name": "Test",
     "fixedStakingContracts": [
       {
-        "address": "0xc97B93070144c917954c0E1bf06b6840E6527064",
+        "address": "0x5c65fb47a81F9a39051d20bf7C2d428CA0995Ea4",
         "APY": "20.2705"
       },
       {
-        "address": "0xdc22d8dC05a81F8D619ECe474a8ee4fbd3aDb8B8",
+        "address": "0x5c65fb47a81F9a39051d20bf7C2d428CA0995Ea4",
         "APY": "30.2260"
       },
       {
-        "address": "0x0316C84222Ec8DC1A1Ab95ba3585db37c7d6ddF8",
+        "address": "0x5c65fb47a81F9a39051d20bf7C2d428CA0995Ea4",
         "APY": "52.0807"
       }
     ],
-    "tokenContract": "0xff6D784D5938CB3980Dce79BbAcEc53987D527d8",
+    "tokenContract": "0xa93Ac4B235082E5F2Ea7B35AA78b78078244fFd9",
     "params": {
-      "chainId": "0x38",
-      "chainName": "Binance Smart Chain",
+      "chainId": "43113",
+      "chainName": "Avax Fuji ",
       "nativeCurrency": {
-        "name": "Binance Coin",
-        "symbol": "BNB",
+        "name": "AVAX",
+        "symbol": "AVAX",
         "decimals": 18
       },
-      "rpcUrls": ["https://bsc-dataseed.binance.org"],
-      "blockExplorerUrls": ["https://bscscan.com"]
+      "rpcUrls": ["https://api.avax-test.network/ext/bc/C/rpc"],
+      "blockExplorerUrls": ["https://testnet.snowtrace.io/"]
     }
   }
 }
