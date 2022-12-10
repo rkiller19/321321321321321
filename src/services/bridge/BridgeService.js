@@ -4,8 +4,8 @@ import DAO1Abi from '../../abi/staking/DAO1.json'
 import BridgeAbi from '../../abi/bridge/Bridge.json'
 import NetworksData from '../../networks.json'
 
-const DAO1Address = NetworksData[1].tokenContract
-const BridgeAddress = NetworksData[1].bridgeContract
+const DAO1Address = NetworksData[42161].tokenContract
+const BridgeAddress = NetworksData[42161].bridgeContract
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 const signer = provider.getSigner()
 const DAO1Signer = new ethers.Contract(DAO1Address, DAO1Abi, signer)

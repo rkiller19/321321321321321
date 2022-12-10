@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import classnames from 'classnames'
 import equal from 'fast-deep-equal'
 
-import DAO1Logo from '../../assets/white-logo.png'
+import DAO1Logo from '../../assets/white-logo6.png'
 import ArrowIcon from '../../assets/arrow-down.png'
 import {
   card,
@@ -312,26 +312,26 @@ function StakingCardPure({ api, APY }) {
               <div className={cardStakingItemHead}>
                 <div className={cardStakingItemInfo}>
                   <div className={cardStakingItemInfoBlock}>
-                    <div className={cardLabel}>DAO1 Staked</div>
+                    <div className={cardLabel}>DAI Staked</div>
                     <div className={cardInfoText}>{stakedAmount}</div>
                   </div>
-                  <div className={cardStakingItemInfoBlock}>
+                  {/* <div className={cardStakingItemInfoBlock}>
                     <div className={cardLabel}>Harvestable</div>
                     <div className={cardInfoText}>{harvestable}</div>
-                  </div>
-                  <div className={cardStakingItemInfoBlock}>
+                  </div> */}
+                  {/* <div className={cardStakingItemInfoBlock}>
                     <div className={cardLabel}>Expires</div>
                     <div className={cardInfoText}>{expires}</div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className={cardStakingItemButtons}>
-                  <Button
+                  {/* <Button
                     disabled={!allowHarvest}
                     onClick={() => harvestHandler(allowHarvest, idx)}
                     className={cardButton}
                   >
                     Harvest
-                  </Button>
+                  </Button> */}
                   <Button
                     disabled={!staked}
                     onClick={() => unstakeHandler(staked, idx)}
@@ -381,7 +381,7 @@ function StakingCardPure({ api, APY }) {
       >
         <div className={stakeModal}>
           <Title className={stakeModalTitle} level={3}>
-            Stake DAO1
+            Stake DAI
           </Title>
           <div className={stakeModalInputContainer}>
             <Input
@@ -425,36 +425,34 @@ function StakingCardPure({ api, APY }) {
         )}
         <div className={cardHead}>
           <div className={cardHeadLogo}>
-            <img src={DAO1Logo} alt="DAO1" />
+            <img src={DAO1Logo} alt="DAI" />
           </div>
           <div className={cardName}>
-            <span className={cardLabel}>Name</span>
+            <span className={cardLabel}>STAKING POOL</span>
             <span className={cardNameText}>
-              {stakeDurationDays
-                ? `DAO1 — FIXED ${stakeDurationDays} DAYS`
-                : ''}
+              DAI
             </span>
           </div>
         </div>
 
         <div className={cardStakingConditions}>
           <div className={cardStakingConditionsItem}>
-            <div className={cardLabel}>{stakeDurationDays}D yield</div>
-            <div className={cardInfoText}>{yieldRate}%</div>
+            <div className={cardLabel}>APY</div>
+            <div className={cardInfoText}>15%</div>
           </div>
           <div className={cardStakingConditionsItem}>
-            <div className={cardLabel}>Daily yield</div>
+            <div className={cardLabel}>Lock Period</div>
             <div className={cardInfoText}>
-              ~ {Number((yieldRate / stakeDurationDays).toFixed(4))}%
+             7 days
             </div>
           </div>
           <div className={cardStakingConditionsItem}>
-            <div className={cardLabel}>APY-{stakeDurationDays}D compound</div>
-            <div className={cardInfoText}>{APY}%</div>
+            <div className={cardLabel}>Staking/unstaking FEE</div>
+            <div className={cardInfoText}>0.5%</div>
           </div>
           <div className={cardStakingConditionsItem}>
-            <div className={cardLabel}>Duration</div>
-            <div className={cardInfoText}>{stakeDurationDays} Days</div>
+            <div className={cardLabel}>Early unstaking FEE</div>
+            <div className={cardInfoText}>15%</div>
           </div>
         </div>
 
@@ -473,7 +471,7 @@ function StakingCardPure({ api, APY }) {
         <div className={cardFooter}>
           <div className={cardTatalStaked}>
             <div className={cardLabel}>Total Staked:</div>
-            <div className={cardTatalStakedValue}>{totalStaked} DAO1</div>
+            <div className={cardTatalStakedValue}>{totalStaked} DAI</div>
           </div>
           <Button
             onClick={() => setIsStakeModalOpen(true)}

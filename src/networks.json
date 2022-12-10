@@ -1,85 +1,25 @@
 {
-  "1": {
-    "blockExplorer": "https://etherscan.io/tx/",
-    "name": "Mainnet",
+  "42161": {
+    "blockExplorer": "https://arbiscan.io/",
+    "name": "ARBITRUM",
     "fixedStakingContracts": [
       {
-        "address": "0x000000000000000000000000000000000000dEaD",
+        "address": "0x457F12330f5e04c70b8773637B70c23C6A515b42",
         "APY": "20.2705"
-      },
-      {
-        "address": "0x000000000000000000000000000000000000dEaD",
-        "APY": "30.2260"
-      },
-      {
-        "address": "0x000000000000000000000000000000000000dEaD",
-        "APY": "52.0807"
       }
     ],
-    "tokenContract": "0x000000000000000000000000000000000000dEaD",
+    "tokenContract": "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70",
     "bridgeContract": "0xFF01b75f2c155dBDA36E68eB6557DEE8d36D6A99",
     "params": {
-      "chainId": "0x1"
-    }
-  },
-  "137": {
-    "blockExplorer": "https://polygonscan.com/tx/",
-    "name": "Polygon",
-    "fixedStakingContracts": [
-      {
-        "address": "0xff6D784D5938CB3980Dce79BbAcEc53987D527d8",
-        "APY": "20.2705"
-      },
-      {
-        "address": "0x63aE7Ad4BC155561442207bB4a89a3FD697068D1",
-        "APY": "30.2260"
-      },
-      {
-        "address": "0xa295338aB1a4A648D3578Da6940acfdEEFFD9B6F",
-        "APY": "52.0807"
-      }
-    ],
-    "tokenContract": "0x3c5D1617C30BA71972adD4b0C9A6B9848f2afeeD",
-    "params": {
-      "chainId": "0x89",
-      "chainName": "Polygon",
+      "chainId": "42161",
+      "chainName": "ARBITRUM",
       "nativeCurrency": {
-        "name": "MATIC",
+        "name": "ETH",
         "symbol": "ETH",
         "decimals": 18
       },
-      "rpcUrls": ["https://rpc-mainnet.maticvigil.com"],
-      "blockExplorerUrls": ["https://polygonscan.com"]
-    }
-  },
-  "43113": {
-    "blockExplorer": "https://testnet.snowtrace.io/",
-    "name": "Test",
-    "fixedStakingContracts": [
-      {
-        "address": "0x5c65fb47a81F9a39051d20bf7C2d428CA0995Ea4",
-        "APY": "20.2705"
-      },
-      {
-        "address": "0x5c65fb47a81F9a39051d20bf7C2d428CA0995Ea4",
-        "APY": "30.2260"
-      },
-      {
-        "address": "0x5c65fb47a81F9a39051d20bf7C2d428CA0995Ea4",
-        "APY": "52.0807"
-      }
-    ],
-    "tokenContract": "0xa93Ac4B235082E5F2Ea7B35AA78b78078244fFd9",
-    "params": {
-      "chainId": "43113",
-      "chainName": "Avax Fuji ",
-      "nativeCurrency": {
-        "name": "AVAX",
-        "symbol": "AVAX",
-        "decimals": 18
-      },
-      "rpcUrls": ["https://api.avax-test.network/ext/bc/C/rpc"],
-      "blockExplorerUrls": ["https://testnet.snowtrace.io/"]
+      "rpcUrls": ["https://1rpc.io/arb"],
+      "blockExplorerUrls": ["https://arbiscan.io/"]
     }
   }
 }

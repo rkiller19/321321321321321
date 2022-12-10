@@ -24,7 +24,7 @@ import { CloseButton } from '../'
 
 const linksList = [
   { path: '/staking', exact: true, text: 'Staking', icon: CoinsIcon },
-  { path: '/farming', exact: true, text: 'Farming', icon: PickIcon },
+  // { path: '/farming', exact: true, text: 'Farming', icon: PickIcon },
 ]
 
 function NavLinks({ linksList }) {

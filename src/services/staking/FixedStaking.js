@@ -81,29 +81,29 @@ export function withFixedStakingApi(Component) {
                 name: 'Start date (stake placement)',
                 value: formatDate(startTime, true),
               },
-              {
-                name: 'End date (stake expiration)',
-                value: formatDate(endTime, true),
-              },
+              // {
+              //   name: 'End date (stake expiration)',
+              //   value: formatDate(endTime, true),
+              // },
               { name: 'Staked amount', value: stakedAmount },
               {
                 name: 'Fee for early (before expire) unstake',
-                value: '1.55% or 1.908 DAO1',
+                value: '15%',
               },
-              {
-                name: 'Total yield (for entire period)',
-                value: `1.55% or ${totalYield} DAO1`,
-              },
+              // {
+              //   name: 'Total yield (for entire period)',
+              //   value: `1.55% or ${totalYield} DAO1`,
+              // },
               {
                 name: 'Locked yield (releases over time)',
                 value: lockedYield,
               },
-              { name: 'Released yield (harvest + harvestable)', value: 0.674 },
-              { name: 'Harvested yield', value: harvestedYiels },
-              {
-                name: 'Harvestable now (available for withdrawal)',
-                value: harvestableYield,
-              },
+              // { name: 'Released yield (harvest + harvestable)', value: 0.674 },
+              // { name: 'Harvested yield', value: harvestedYiels },
+              // {
+              //   name: 'Harvestable now (available for withdrawal)',
+              //   value: harvestableYield,
+              // },
               {
                 name: 'Last harvest time',
                 value: formatDate(lastHarvestTime, true),
@@ -151,7 +151,7 @@ export function withFixedStakingApi(Component) {
     }
 
     async function approve() {
-      try {
+      try { 
         return DAO1Signer.approve(contractAddress, ethers.constants.MaxUint256)
       } catch (error) {
         console.log(error)

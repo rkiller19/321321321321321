@@ -34,14 +34,14 @@ export const Sidebar = () => {
           >
             Staking
           </NavLink>
-          <NavLink
+          {/* <NavLink
             exact
             to="/farming"
             className="li"
             activeClassName="active-class"
           >
             Farming
-          </NavLink>
+          </NavLink> */}
         </ul>
       </div>
     </div>

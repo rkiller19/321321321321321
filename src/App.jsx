@@ -10,7 +10,7 @@ export function App() {
         <Switch>
           <Route path="/" component={ConnectWallet} exact />
           <Route path="/staking" component={Staking} />
-          <Route path="/farming" component={Farming} />
+          {/* <Route path="/farming" component={Farming} /> */}
           <Route path="/bridge" component={Bridge} />
         </Switch>
       </BrowserRouter>
