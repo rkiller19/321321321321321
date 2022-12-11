@@ -3,6 +3,7 @@ import { useEthers } from '@usedapp/core'
 
 import loader from './txLoader.module.scss'
 import loaderCloseBtn from './txLoader.module.scss'
+import styles from './txLoader.module.scss'
 import { Spinner, Link } from '../'
 import { shortenTxHash } from '../../utils/shortenTxHash'
 import NetworksConfig from '../../networks.json'
@@ -18,7 +19,7 @@ function TxLink({ txHash }) {
   const link = `${blockExplorer}/${txHash}`
 
   return (
-    <Link className={link} target="_blank" rel="noreferrer" href={link}>
+    <Link className={styles.link} target="_blank" rel="noreferrer" href={link}>
       {shortenTxHash(String(txHash))}
     </Link>
   )
@@ -54,8 +55,8 @@ export function TxLoader({ txHash, closeHandler, errorMessage, children }) {
   }
 
   return (
-    <div className={loader}>
-      <button onClick={closeHandler} className={loaderCloseBtn}>
+    <div className={styles.loader}>
+      <button onClick={closeHandler} className={styles.loaderCloseBtn}>
         <span />
         <span />
       </button>

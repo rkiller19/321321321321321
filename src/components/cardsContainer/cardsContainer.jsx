@@ -1,7 +1,7 @@
 import React from 'react'
 
-import stakingCardsContainer from './cardsContainer.module.scss'
+import styles from './cardsContainer.module.scss'
 
 export function CardsContainer({ children }) {
-  return <div className={stakingCardsContainer}>{children}</div>
+  return <div className={styles.stakingCardsContainer}>{children}</div>
 }

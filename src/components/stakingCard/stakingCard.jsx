@@ -41,6 +41,7 @@ import stakeModalMaxButton from './stakingCard.module.scss'
 import errorMessage from './stakingCard.module.scss'
 import stakeModalBalance from './stakingCard.module.scss'
 import hoverLoader from './stakingCard.module.scss'
+import styles from './stakingCard.module.scss'
 
 import { Button, Modal, Title, Input, Spinner, TxLoader } from '../'
 import { withFixedStakingApi } from '../../services/staking/FixedStaking'
@@ -284,7 +285,7 @@ function StakingCardPure({ api, APY }) {
 
   const StakingHistory = () =>
     !stakingHistory || stakingHistory.length === 0 ? (
-      <div className={cardStakingListEmpty}>Empty! No information</div>
+      <div className={styles.cardStakingListEmpty}>Empty! No information</div>
     ) : (
       stakingHistory.map(
         (
@@ -308,52 +309,52 @@ function StakingCardPure({ api, APY }) {
             : cardArrowButton
 
           return (
-            <div key={idx} className={cardStakingItem}>
-              <div className={cardStakingItemHead}>
-                <div className={cardStakingItemInfo}>
-                  <div className={cardStakingItemInfoBlock}>
-                    <div className={cardLabel}>DAI Staked</div>
-                    <div className={cardInfoText}>{stakedAmount}</div>
+            <div key={idx} className={styles.cardStakingItem}>
+              <div className={styles.cardStakingItemHead}>
+                <div className={styles.cardStakingItemInfo}>
+                  <div className={styles.cardStakingItemInfoBlock}>
+                    <div className={styles.cardLabel}>DAI Staked</div>
+                    <div className={styles.cardInfoText}>{stakedAmount}</div>
                   </div>
-                  {/* <div className={cardStakingItemInfoBlock}>
-                    <div className={cardLabel}>Harvestable</div>
-                    <div className={cardInfoText}>{harvestable}</div>
+                  {/* <div className={styles.cardStakingItemInfoBlock}>
+                    <div className={styles.cardLabel}>Harvestable</div>
+                    <div className={styles.cardInfoText}>{harvestable}</div>
                   </div> */}
-                  {/* <div className={cardStakingItemInfoBlock}>
-                    <div className={cardLabel}>Expires</div>
-                    <div className={cardInfoText}>{expires}</div>
+                  {/* <div className={styles.cardStakingItemInfoBlock}>
+                    <div className={styles.cardLabel}>Expires</div>
+                    <div className={styles.cardInfoText}>{expires}</div>
                   </div> */}
                 </div>
-                <div className={cardStakingItemButtons}>
+                <div className={styles.cardStakingItemButtons}>
                   {/* <Button
                     disabled={!allowHarvest}
                     onClick={() => harvestHandler(allowHarvest, idx)}
-                    className={cardButton}
+                    className={styles.cardButton}
                   >
                     Harvest
                   </Button> */}
                   <Button
                     disabled={!staked}
                     onClick={() => unstakeHandler(staked, idx)}
-                    className={cardButton}
+                    className={styles.cardButton}
                   >
                     Unstake
                   </Button>
                   <button
                     onClick={() => accordionClickHandler(idx)}
-                    className={arrowButtonClassnames}
+                    className={styles.arrowButtonClassnames}
                   >
                     <img src={ArrowIcon} alt="Arrow" />
                   </button>
                 </div>
               </div>
 
-              <div className={detailsClassNames}>
+              <div className={styles.detailsClassNames}>
                 {details &&
                   details.map(({ name, value }, idx) => (
-                    <div key={idx} className={cardStakingItemDetailsRow}>
-                      <div className={cardStakingItemDetailsName}>{name}</div>
-                      <div className={cardStakingItemDetailsValue}>{value}</div>
+                    <div key={idx} className={styles.cardStakingItemDetailsRow}>
+                      <div className={styles.cardStakingItemDetailsName}>{name}</div>
+                      <div className={styles.cardStakingItemDetailsValue}>{value}</div>
                     </div>
                   ))}
               </div>
@@ -374,23 +375,23 @@ function StakingCardPure({ api, APY }) {
   }
 
   return (
-    <div className={cardWrapper}>
+    <div className={styles.cardWrapper}>
       <Modal
         isOpen={isStakeModalOpen}
         closeHandler={() => setIsStakeModalOpen(false)}
       >
-        <div className={stakeModal}>
-          <Title className={stakeModalTitle} level={3}>
+        <div className={styles.stakeModal}>
+          <Title className={styles.stakeModalTitle} level={3}>
             Stake DAI
           </Title>
-          <div className={stakeModalInputContainer}>
+          <div className={styles.stakeModalInputContainer}>
             <Input
               onChange={stakeAmountHandler}
               value={stakeAmount}
-              className={stakeModalInput}
+              className={styles.stakeModalInput}
             />
             <Button
-              className={stakeModalMaxButton}
+              className={styles.stakeModalMaxButton}
               onClick={() => {
                 setStakeAmount(String(tokensBalance))
               }}
@@ -399,12 +400,12 @@ function StakingCardPure({ api, APY }) {
             </Button>
           </div>
           {!inputValidity && (
-            <span className={errorMessage}>
+            <span className={styles.errorMessage}>
               Value must be a number greater than 0
             </span>
           )}
 
-          <span className={stakeModalBalance}>Balance: {tokensBalance}</span>
+          <span className={styles.stakeModalBalance}>Balance: {tokensBalance}</span>
 
           {modalLoaderVisible ? (
             <TxLoader
@@ -417,46 +418,46 @@ function StakingCardPure({ api, APY }) {
           )}
         </div>
       </Modal>
-      <div className={card}>
+      <div className={styles.card}>
         {hoverLoaderVisible && (
-          <div className={hoverLoader}>
+          <div className={styles.hoverLoader}>
             <Spinner />
           </div>
         )}
-        <div className={cardHead}>
-          <div className={cardHeadLogo}>
+        <div className={styles.cardHead}>
+          <div className={styles.cardHeadLogo}>
             <img src={DAO1Logo} alt="DAI" />
           </div>
-          <div className={cardName}>
-            <span className={cardLabel}>STAKING POOL</span>
-            <span className={cardNameText}>
+          <div className={styles.cardName}>
+            <span className={styles.cardLabel}>STAKING POOL</span>
+            <span className={styles.cardNameText}>
               DAI
             </span>
           </div>
         </div>
 
-        <div className={cardStakingConditions}>
-          <div className={cardStakingConditionsItem}>
-            <div className={cardLabel}>APY</div>
-            <div className={cardInfoText}>15%</div>
+        <div className={styles.cardStakingConditions}>
+          <div className={styles.cardStakingConditionsItem}>
+            <div className={styles.cardLabel}>APY</div>
+            <div className={styles.cardInfoText}>15%</div>
           </div>
-          <div className={cardStakingConditionsItem}>
-            <div className={cardLabel}>Lock Period</div>
-            <div className={cardInfoText}>
+          <div className={styles.cardStakingConditionsItem}>
+            <div className={styles.cardLabel}>Lock Period</div>
+            <div className={styles.cardInfoText}>
              7 days
             </div>
           </div>
-          <div className={cardStakingConditionsItem}>
-            <div className={cardLabel}>Staking/unstaking FEE</div>
-            <div className={cardInfoText}>0.5%</div>
+          <div className={styles.cardStakingConditionsItem}>
+            <div className={styles.cardLabel}>Staking/unstaking FEE</div>
+            <div className={styles.cardInfoText}>0.5%</div>
           </div>
-          <div className={cardStakingConditionsItem}>
-            <div className={cardLabel}>Early unstaking FEE</div>
-            <div className={cardInfoText}>15%</div>
+          <div className={styles.cardStakingConditionsItem}>
+            <div className={styles.cardLabel}>Early unstaking FEE</div>
+            <div className={styles.cardInfoText}>15%</div>
           </div>
         </div>
 
-        <div className={cardStakingList}>
+        <div className={styles.cardStakingList}>
           {cardLoaderVisible && (
             <TxLoader
               txHash={cardTxHash}
@@ -468,14 +469,14 @@ function StakingCardPure({ api, APY }) {
           <StakingHistory />
         </div>
 
-        <div className={cardFooter}>
-          <div className={cardTatalStaked}>
-            <div className={cardLabel}>Total Staked:</div>
-            <div className={cardTatalStakedValue}>{totalStaked} DAI</div>
+        <div className={styles.cardFooter}>
+          <div className={styles.cardTatalStaked}>
+            <div className={styles.cardLabel}>Total Staked:</div>
+            <div className={styles.cardTatalStakedValue}>{totalStaked} DAI</div>
           </div>
           <Button
             onClick={() => setIsStakeModalOpen(true)}
-            className={cardButton}
+            className={styles.cardButton}
           >
             Stake
           </Button>

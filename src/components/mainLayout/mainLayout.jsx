@@ -10,6 +10,7 @@ import mainContent from './mainLayout.module.scss'
 import connectMessage from './mainLayout.module.scss'
 import connectMessageInnerContainer from './mainLayout.module.scss'
 import connectMessageInnerContainerTitle from './mainLayout.module.scss'
+import styles from './mainLayout.module.scss'
 
 import { SidebarNew, Header, Title, ConnectionStatus } from '../'
 import NETWORKS from '../../networks.json'
@@ -26,11 +27,11 @@ function listSupportenNetworks(supportenNetworks) {
 
 function MainWrap({ title, children }) {
   return (
-    <div className={layout}>
+    <div className={styles.layout}>
       <SidebarNew />
-      <section className={mainSection}>
+      <section className={styles.mainSection}>
         <Header title={title} />
-        <main className={mainContent}>{children}</main>
+        <main className={styles.mainContent}>{children}</main>
       </section>
     </div>
   )
@@ -47,8 +48,8 @@ export function MainLayout({ title, pageSupportedChains, children }) {
   if (!window.ethereum) {
     return (
       <MainWrap title={title}>
-        <div className={connectMessage}>
-          <div className={connectMessageInnerContainer}>
+        <div className={styles.connectMessage}>
+          <div className={styles.connectMessageInnerContainer}>
             <Title level={6}>
               Please use Metamask app or browser extension
             </Title>
@@ -61,8 +62,8 @@ export function MainLayout({ title, pageSupportedChains, children }) {
   if (error && !wrongNetwork) {
     return (
       <MainWrap title={title}>
-        <div className={connectMessage}>
-          <div className={connectMessageInnerContainer}>{String(error)}</div>
+        <div className={styles.connectMessage}>
+          <div className={styles.connectMessageInnerContainer}>{String(error)}</div>
         </div>
       </MainWrap>
     )
@@ -71,9 +72,9 @@ export function MainLayout({ title, pageSupportedChains, children }) {
   if (wrongNetwork) {
     return (
       <MainWrap title={title}>
-        <div className={connectMessage}>
-          <div className={connectMessageInnerContainer}>
-            <Title className={connectMessageInnerContainerTitle} level={3}>
+        <div className={styles.connectMessage}>
+          <div className={styles.connectMessageInnerContainer}>
+            <Title className={styles.connectMessageInnerContainerTitle} level={3}>
               Unsupported network
             </Title>
             <div>
@@ -92,9 +93,9 @@ export function MainLayout({ title, pageSupportedChains, children }) {
 
   return (
     <MainWrap title={title}>
-      <div className={connectMessage}>
-        <div className={connectMessageInnerContainer}>
-          <Title className={connectMessageInnerContainerTitle} level={3}>
+      <div className={styles.connectMessage}>
+        <div className={styles.connectMessageInnerContainer}>
+          <Title className={styles.connectMessageInnerContainerTitle} level={3}>
             Please connect wallet
           </Title>
           <ConnectionStatus />

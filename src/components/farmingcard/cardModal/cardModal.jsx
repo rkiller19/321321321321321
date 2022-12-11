@@ -7,6 +7,7 @@ import cardModalInputContainer from './cardModal.module.scss'
 import cardModalInput from './cardModal.module.scss'
 import cardModalMaxButton from './cardModal.module.scss'
 import cardModalBalance from './cardModal.module.scss'
+import styles from './cardModal.module.scss'
 
 import { Modal, Title, Button, Input } from '../../'
 
@@ -31,18 +32,18 @@ export function CardModal(props) {
 
   return (
     <Modal isOpen={isOpen} closeHandler={closeHandler}>
-      <div className={cardModal}>
-        <Title className={cardModalTitle} level={3}>
+      <div className={styles.cardModal}>
+        <Title className={styles.cardModalTitle} level={3}>
           {title}
         </Title>
-        <div className={cardModalInputContainer}>
+        <div className={styles.cardModalInputContainer}>
           <Input
             onChange={inputHandler}
             value={inputValue}
-            className={cardModalInput}
+            className={styles.cardModalInput}
           />
           <Button
-            className={cardModalMaxButton}
+            className={styles.cardModalMaxButton}
             onClick={() => {
               setInputValue(String(balance))
             }}
@@ -51,7 +52,7 @@ export function CardModal(props) {
           </Button>
         </div>
 
-        <span className={cardModalBalance}>Balance: {balance}</span>
+        <span className={styles.cardModalBalance}>Balance: {balance}</span>
 
         <Button
           onClick={callMethodHandler}

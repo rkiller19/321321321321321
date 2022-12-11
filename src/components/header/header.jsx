@@ -6,6 +6,8 @@ import { openMenuHandler } from '../../actions/menuActions'
 import header from './header.module.scss'
 import headerLeftSide from './header.module.scss'
 import headerBurgerButton from './header.module.scss'
+import styles from './header.module.scss'
+
 
 import { Title, ConnectionStatus } from '../'
 
@@ -17,9 +19,9 @@ export function Header({ title }) {
   }
 
   return (
-    <header className={header}>
-      <div className={headerLeftSide}>
-        <button onClick={openMenu} className={headerBurgerButton}>
+    <header className={styles.header}>
+      <div className={styles.headerLeftSide}>
+        <button onClick={openMenu} className={styles.headerBurgerButton}>
           <span></span>
           <span></span>
           <span></span>

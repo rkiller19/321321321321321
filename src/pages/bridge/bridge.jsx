@@ -18,6 +18,7 @@ import BridgeButton from './bridge.module.scss'
 import BridgeInput from './bridge.module.scss'
 import BridgeInputError from './bridge.module.scss'
 import ErrorMessage from './bridge.module.scss'
+import styles from './bridge.module.scss'
 
 import { MainLayout, Title, Button, Input, TxLoader } from '../../components'
 import {
@@ -155,16 +156,16 @@ export function Bridge() {
 
   return (
     <MainLayout title="Bridge" pageSupportedChains={[1]}>
-      <div className={BridgeSyled}>
-        <Title level={2} className={BridgeTitle}>
+      <div className={styles.BridgeSyled}>
+        <Title level={2} className={styles.BridgeTitle}>
           ETH to BSC bridge
         </Title>
-        <div className={BridgeCard}>
-          <div className={BridgeCardCol}>
-            <div className={BridgeInputContainer}>
-              <div className={BridgeCardLabel}>
-                <div className={BridgeCardLabelName}>Balance:</div>
-                <div className={BridgeCardLabelValue}>
+        <div className={styles.BridgeCard}>
+          <div className={styles.BridgeCardCol}>
+            <div className={styles.BridgeInputContainer}>
+              <div className={styles.BridgeCardLabel}>
+                <div className={styles.BridgeCardLabelName}>Balance:</div>
+                <div className={styles.BridgeCardLabelValue}>
                   {utils.formatUnits(balance, 18)}
                 </div>
               </div>
@@ -173,32 +174,32 @@ export function Bridge() {
                 placeholder="Enter amount"
                 onChange={bridgeValueHandler}
                 value={bridgeValue}
-                className={InputClassNames}
+                className={styles.InputClassNames}
               />
-              <div className={ErrorMessage}>{errorMessage}</div>
+              <div className={styles.ErrorMessage}>{errorMessage}</div>
             </div>
           </div>
 
-          <div className={BridgeCardCol}>
-            <div className={BridgeCardNetworks}>
-              <div className={BridgeCardNetwork}>
-                <div className={BridgeCardLabel}>
-                  <div className={BridgeCardLabelName}>From:</div>
-                  <div className={BridgeCardLabelValue}>
+          <div className={styles.BridgeCardCol}>
+            <div className={styles.BridgeCardNetworks}>
+              <div className={styles.BridgeCardNetwork}>
+                <div className={styles.BridgeCardLabel}>
+                  <div className={styles.BridgeCardLabelName}>From:</div>
+                  <div className={styles.BridgeCardLabelValue}>
                     {networks.from.name}
                   </div>
                 </div>
-                <div className={BridgeCardNetworkValue}>
+                <div className={styles.BridgeCardNetworkValue}>
                   {networks.from.symbol}
                 </div>
               </div>
 
-              <div className={BridgeCardNetwork}>
-                <div className={BridgeCardLabel}>
-                  <div className={BridgeCardLabelName}>To:</div>
-                  <div className={BridgeCardLabelValue}>{networks.to.name}</div>
+              <div className={styles.BridgeCardNetwork}>
+                <div className={styles.BridgeCardLabel}>
+                  <div className={styles.BridgeCardLabelName}>To:</div>
+                  <div className={styles.BridgeCardLabelValue}>{networks.to.name}</div>
                 </div>
-                <div className={BridgeCardNetworkValue}>
+                <div className={styles.BridgeCardNetworkValue}>
                   {networks.to.symbol}
                 </div>
               </div>
@@ -209,7 +210,7 @@ export function Bridge() {
         {insufficientAllowance ? (
           <Button
             onClick={approveHandler}
-            className={BridgeButton}
+            className={styles.BridgeButton}
             disabled={loaderIsVisible}
           >
             Approve
@@ -217,7 +218,7 @@ export function Bridge() {
         ) : (
           <Button
             onClick={bridgeHandler}
-            className={BridgeButton}
+            className={styles.BridgeButton}
             disabled={!!errorMessage || !bridgeValue || loaderIsVisible}
           >
             Bridge

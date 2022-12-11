@@ -22,6 +22,7 @@ import cardTatalStakedValue from './farmingcard.module.scss'
 import cardButton from './farmingcard.module.scss'
 import externalLink from './farmingcard.module.scss'
 import externalLinkImg from './farmingcard.module.scss'
+import styles from './farmingcard.module.scss'
 
 import { CardModal } from './cardModal/cardModal'
 import { Button, TxLoader, Modal, Title } from '../'
@@ -89,24 +90,24 @@ export const FarmingCard = (props) => {
   }
 
   return (
-    <div className={cardWrapper}>
-      <div className={card}>
-        <div className={cardHead}>
-          <div className={cardHeadLogo}>
+    <div className={styles.cardWrapper}>
+      <div className={styles.card}>
+        <div className={styles.cardHead}>
+          <div className={styles.cardHeadLogo}>
             <img src={props.logo} alt="DAO1" />
           </div>
-          <div className={cardName}>
-            <span className={cardLabel}>Name</span>
-            <span className={cardNameText}>
+          <div className={styles.cardName}>
+            <span className={styles.cardLabel}>Name</span>
+            <span className={styles.cardNameText}>
               {props.tokenName}
               {props.linkUrl !== '' ? (
                 <a
-                  className={externalLink}
+                  className={styles.externalLink}
                   href={props.linkUrl}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={LinkIcon} className={externalLinkImg} alt="" />
+                  <img src={LinkIcon} className={styles.externalLinkImg} alt="" />
                 </a>
               ) : (
                 ''
@@ -115,14 +116,14 @@ export const FarmingCard = (props) => {
           </div>
         </div>
 
-        <div className={cardStakingConditions}>
-          <div className={cardStakingConditionsItem}>
-            <div className={cardLabel}>Allocation</div>
-            <div className={cardInfoText}>{props.alloc}</div>
+        <div className={styles.cardStakingConditions}>
+          <div className={styles.cardStakingConditionsItem}>
+            <div className={styles.cardLabel}>Allocation</div>
+            <div className={styles.cardInfoText}>{props.alloc}</div>
           </div>
-          <div className={cardStakingConditionsItem}>
-            <div className={cardLabel}>TOTAL LIQUIDITY</div>
-            <div className={cardInfoText}>
+          <div className={styles.cardStakingConditionsItem}>
+            <div className={styles.cardLabel}>TOTAL LIQUIDITY</div>
+            <div className={styles.cardInfoText}>
               {props.showLiquidity ? (
                 <p className="percent">
                   $
@@ -134,25 +135,25 @@ export const FarmingCard = (props) => {
               )}
             </div>
           </div>
-          <div className={cardStakingConditionsItem}>
-            <div className={cardLabel}>LOCK</div>
-            <div className={cardInfoText}>{props.lockInPeriod}</div>
+          <div className={styles.cardStakingConditionsItem}>
+            <div className={styles.cardLabel}>LOCK</div>
+            <div className={styles.cardInfoText}>{props.lockInPeriod}</div>
           </div>
         </div>
 
-        <div className={cardStakingItem}>
-          <div className={cardStakingItemHead}>
-            <div className={cardStakingItemInfo}>
-              <div className={cardStakingItemInfoBlock}>
-                <div className={cardLabel}>
+        <div className={styles.cardStakingItem}>
+          <div className={styles.cardStakingItemHead}>
+            <div className={styles.cardStakingItemInfo}>
+              <div className={styles.cardStakingItemInfoBlock}>
+                <div className={styles.cardLabel}>
                   {props.tokenName.replace(/ *\([^)]*\)*/g, '')} STAKED
                 </div>
-                <div className={cardInfoText}>{props.tokenStaked}</div>
+                <div className={styles.cardInfoText}>{props.tokenStaked}</div>
               </div>
             </div>
-            <div className={cardStakingItemButtons}>
+            <div className={styles.cardStakingItemButtons}>
               <Button
-                className={cardButton}
+                className={styles.cardButton}
                 disabled={
                   STAKING_IN_PROGRESS ||
                   UNSTAKING_IN_PROGRESS ||
@@ -172,7 +173,7 @@ export const FarmingCard = (props) => {
               </Button>
 
               <Button
-                className={cardButton}
+                className={styles.cardButton}
                 disabled={STAKING_IN_PROGRESS || UNSTAKING_IN_PROGRESS}
                 onClick={() => {
                   if (UNSTAKING_IN_PROGRESS) {
@@ -190,13 +191,13 @@ export const FarmingCard = (props) => {
           )}
         </div>
 
-        <div className={cardFooter}>
-          <div className={cardTatalStaked}>
-            <div className={cardLabel}>{props.title} EARNED</div>
-            <div className={cardTatalStakedValue}>{props.tokenEarned}</div>
+        <div className={styles.cardFooter}>
+          <div className={styles.cardTatalStaked}>
+            <div className={styles.cardLabel}>{props.title} EARNED</div>
+            <div className={styles.cardTatalStakedValue}>{props.tokenEarned}</div>
           </div>
           <Button
-            className={cardButton}
+            className={styles.cardButton}
             onClick={props.checkAndHarvest}
             disabled={HARVEST_IN_PROGRESS}
           >

@@ -18,6 +18,7 @@ import sidebarNavLink from './sidebarNew.module.scss'
 import sidebarNavLinkIcon from './sidebarNew.module.scss'
 import sidebarNavLinkActive from './sidebarNew.module.scss'
 import closeMenuButton from './sidebarNew.module.scss'
+import styles from './sidebarNew.module.scss'
 
 import { openMenuHandler } from '../../actions/menuActions'
 import { CloseButton } from '../'
@@ -29,14 +30,14 @@ const linksList = [
 
 function NavLinks({ linksList }) {
   return linksList.map(({ path, exact, text, icon }, idx) => (
-    <li key={idx} className={sidebarNavItem}>
+    <li key={idx} className={styles.sidebarNavItem}>
       <NavLink
-        activeClassName={sidebarNavLinkActive}
-        className={sidebarNavLink}
+        activeclassName={styles.sidebarNavLinkActive}
+        className={styles.sidebarNavLink}
         exact={exact}
         to={path}
       >
-        <img className={sidebarNavLinkIcon} src={icon} alt="#" />
+        <img className={styles.sidebarNavLinkIcon} src={icon} alt="#" />
         {text}
       </NavLink>
     </li>
@@ -58,14 +59,14 @@ export function SidebarNew() {
 
   return (
     <>
-      <div onClick={closeMenu} className={backgroundLayesClassNames}></div>
-      <div className={classNames}>
-        <CloseButton onClick={closeMenu} className={closeMenuButton} />
-        <div className={sidebarLogo}>
+      <div onClick={closeMenu} className={styles.backgroundLayesClassNames}></div>
+      <div className={styles.classNames}>
+        <CloseButton onClick={closeMenu} className={styles.closeMenuButton} />
+        <div className={styles.sidebarLogo}>
           <img src={Logo} alt="DAO1" />
         </div>
 
-        <ul className={sidebarNavList}>
+        <ul className={styles.sidebarNavList}>
           <NavLinks linksList={linksList} />
         </ul>
       </div>

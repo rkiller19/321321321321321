@@ -7,6 +7,7 @@ import h3 from './title.module.scss'
 import h4 from './title.module.scss'
 import h5 from './title.module.scss'
 import h6 from './title.module.scss'
+import styles from './title.module.scss'
 
 export function Title({ level, children, className, ...props }) {
   let TitleTag
@@ -44,7 +45,7 @@ export function Title({ level, children, className, ...props }) {
   const classNames = classnames(levelClassName, className)
 
   return (
-    <TitleTag className={classNames} {...props}>
+    <TitleTag className={styles.classNames} {...props}>
       {children}
     </TitleTag>
   )

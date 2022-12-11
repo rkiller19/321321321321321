@@ -20,6 +20,7 @@ import networksMenuList from './connectionStatus.module.scss'
 import networksMenuWrapper from './connectionStatus.module.scss'
 import networksMenuButton from './connectionStatus.module.scss'
 import networksMenuArrow from './connectionStatus.module.scss'
+import styles from './connectionStatus.module.scss'
 
 import { withWalletConnection } from '../../utils/withWalletConnection'
 import { switchNetwork } from '../../utils/switchNetwork'
@@ -40,18 +41,18 @@ function NetworkSwitcher({ deactivateWallet }) {
     : NETWORKS[chainId].name
 
   return (
-    <div className={networksMenuWrapper}>
+    <div className={styles.networksMenuWrapper}>
       <Button
         onClick={() => {
           setMenuIsVidible(!menuIsVisible)
         }}
       >
         {selectButtonText}
-        <img className={networksMenuArrow} src={ArrowDown} alt="Select" />
+        <img className={styles.networksMenuArrow} src={ArrowDown} alt="Select" />
       </Button>
-      <div className={menuClassNames}>
+      <div className={styles.menuClassNames}>
         Select network
-        <div className={networksMenuList}>
+        <div className={styles.networksMenuList}>
           {supportedChains.map((id) => {
             if (chainId === id) {
               return null
@@ -63,13 +64,13 @@ function NetworkSwitcher({ deactivateWallet }) {
                 onClick={() => {
                   switchNetwork(id)
                 }}
-                className={networksMenuButton}
+                className={styles.networksMenuButton}
               >
                 {NETWORKS[id].name}
               </Button>
             )
           })}
-          <Button onClick={deactivateWallet} className={disconnectButton}>
+          <Button onClick={deactivateWallet} className={styles.disconnectButton}>
             Disconnect
           </Button>
         </div>
@@ -86,7 +87,7 @@ function ConnectionStatusPure({ activateWallet, deactivateWallet }) {
   const ConnectionResult = () => {
     if (error && !wrongNetwork) {
       return (
-        <Button disabled className={connectButton}>
+        <Button disabled className={styles.connectButton}>
           Error
         </Button>
       )
@@ -99,9 +100,9 @@ function ConnectionStatusPure({ activateWallet, deactivateWallet }) {
     if (isConnected && account) {
       return (
         <>
-          <div className={accountAddressBlock}>
-            <img className={walletIcon} src={WalletIcon} alt="Wallet" />
-            <span className={accountAddress}>
+          <div className={styles.accountAddressBlock}>
+            <img className={styles.walletIcon} src={WalletIcon} alt="Wallet" />
+            <span className={styles.accountAddress}>
               {account && shortenAddress(account)}
             </span>
           </div>
@@ -111,14 +112,14 @@ function ConnectionStatusPure({ activateWallet, deactivateWallet }) {
     }
 
     return (
-      <Button onClick={activateWallet} className={connectButton}>
+      <Button onClick={activateWallet} className={styles.connectButton}>
         Connect Wallet
       </Button>
     )
   }
 
   return (
-    <div className={connectionStatus}>
+    <div className={styles.connectionStatus}>
       <ConnectionResult />
     </div>
   )

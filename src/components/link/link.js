@@ -3,11 +3,13 @@ import classnames from 'classnames'
 
 import link from './link.module.scss'
 
+import styles from './link.module.scss'
+
 export function Link({ className, children, ...props }) {
   const classNames = classnames(className, link)
 
   return (
-    <a className={classNames} {...props}>
+    <a className={styles.classNames} {...props}>
       {children}
     </a>
   )
