@@ -1,29 +1,28 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+ 
+import card from './farmingcard.module.scss'
+import cardWrapper from './farmingcard.module.scss'
+import cardHead from './farmingcard.module.scss'
+import cardHeadLogo from './farmingcard.module.scss'
+import cardLabel from './farmingcard.module.scss'
+import  cardInfoText from './farmingcard.module.scss'
+import cardName from './farmingcard.module.scss'
+import cardNameText from './farmingcard.module.scss'
+import  cardStakingConditions from './farmingcard.module.scss'
+import cardStakingConditionsItem from './farmingcard.module.scss'
+import cardStakingItem from './farmingcard.module.scss'
+import cardStakingItemHead from './farmingcard.module.scss'
+import cardStakingItemInfo from './farmingcard.module.scss'
+import cardStakingItemInfoBlock from './farmingcard.module.scss'
+import cardStakingItemButtons from './farmingcard.module.scss'
+import cardFooter from './farmingcard.module.scss'
+import cardTatalStaked from './farmingcard.module.scss'
+import cardTatalStakedValue from './farmingcard.module.scss'
+import cardButton from './farmingcard.module.scss'
+import externalLink from './farmingcard.module.scss'
+import externalLinkImg from './farmingcard.module.scss'
 
-import {
-  card,
-  cardWrapper,
-  cardHead,
-  cardHeadLogo,
-  cardLabel,
-  cardInfoText,
-  cardName,
-  cardNameText,
-  cardStakingConditions,
-  cardStakingConditionsItem,
-  cardStakingItem,
-  cardStakingItemHead,
-  cardStakingItemInfo,
-  cardStakingItemInfoBlock,
-  cardStakingItemButtons,
-  cardFooter,
-  cardTatalStaked,
-  cardTatalStakedValue,
-  cardButton,
-  externalLink,
-  externalLinkImg,
-} from './farmingcard.module.scss'
 import { CardModal } from './cardModal/cardModal'
 import { Button, TxLoader, Modal, Title } from '../'
 import { errorModalAction } from '../../actions/modalAction'

@@ -1,7 +1,12 @@
 import React from 'react'
 import classnames from 'classnames'
 
-import { h1, h2, h3, h4, h5, h6 } from './title.module.scss'
+import h1 from './title.module.scss'
+import h2 from './title.module.scss'
+import h3 from './title.module.scss'
+import h4 from './title.module.scss'
+import h5 from './title.module.scss'
+import h6 from './title.module.scss'
 
 export function Title({ level, children, className, ...props }) {
   let TitleTag

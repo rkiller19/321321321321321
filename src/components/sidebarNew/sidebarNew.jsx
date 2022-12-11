@@ -6,19 +6,19 @@ import classnames from 'classnames'
 import CoinsIcon from '../../assets/coins-red.png'
 import PickIcon from '../../assets/pick-grey.png'
 import Logo from '../../assets/white-logo.png'
-import {
-  sidebar,
-  sidebarBackgroundLayer,
-  sidebarBackgroundLayerHidden,
-  sidebarHidden,
-  sidebarLogo,
-  sidebarNavList,
-  sidebarNavItem,
-  sidebarNavLink,
-  sidebarNavLinkIcon,
-  sidebarNavLinkActive,
-  closeMenuButton,
-} from './sidebarNew.module.scss'
+ 
+import sidebar from './sidebarNew.module.scss'
+import sidebarBackgroundLayer from './sidebarNew.module.scss'
+import sidebarBackgroundLayerHidden from './sidebarNew.module.scss'
+import sidebarHidden from './sidebarNew.module.scss'
+import sidebarLogo from './sidebarNew.module.scss'
+import sidebarNavList from './sidebarNew.module.scss'
+import sidebarNavItem from './sidebarNew.module.scss'
+import sidebarNavLink from './sidebarNew.module.scss'
+import sidebarNavLinkIcon from './sidebarNew.module.scss'
+import sidebarNavLinkActive from './sidebarNew.module.scss'
+import closeMenuButton from './sidebarNew.module.scss'
+
 import { openMenuHandler } from '../../actions/menuActions'
 import { CloseButton } from '../'
 

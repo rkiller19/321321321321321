@@ -7,20 +7,20 @@ import classnames from 'classnames'
 import WalletIcon from '../../assets/wallet-red.png'
 import ArrowDown from '../../assets/arrow-down.png'
 import { Button } from '../'
-import {
-  connectionStatus,
-  walletIcon,
-  accountAddressBlock,
-  accountAddress,
-  connectButton,
-  disconnectButton,
-  networksMenu,
-  networksMenuHidden,
-  networksMenuList,
-  networksMenuWrapper,
-  networksMenuButton,
-  networksMenuArrow,
-} from './connectionStatus.module.scss'
+
+import connectionStatus  from './connectionStatus.module.scss'   
+import walletIcon  from './connectionStatus.module.scss'
+import accountAddressBlock  from './connectionStatus.module.scss'
+import accountAddress  from './connectionStatus.module.scss'
+import connectButton from './connectionStatus.module.scss'
+import disconnectButton from './connectionStatus.module.scss'
+import networksMenu from './connectionStatus.module.scss'
+import networksMenuHidden from './connectionStatus.module.scss'
+import networksMenuList from './connectionStatus.module.scss'
+import networksMenuWrapper from './connectionStatus.module.scss'
+import networksMenuButton from './connectionStatus.module.scss'
+import networksMenuArrow from './connectionStatus.module.scss'
+
 import { withWalletConnection } from '../../utils/withWalletConnection'
 import { switchNetwork } from '../../utils/switchNetwork'
 import NETWORKS from '../../networks.json'

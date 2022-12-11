@@ -4,44 +4,44 @@ import equal from 'fast-deep-equal'
 
 import DAO1Logo from '../../assets/white-logo6.png'
 import ArrowIcon from '../../assets/arrow-down.png'
-import {
-  card,
-  cardWrapper,
-  cardHead,
-  cardHeadLogo,
-  cardLabel,
-  cardInfoText,
-  cardName,
-  cardNameText,
-  cardStakingConditions,
-  cardStakingConditionsItem,
-  cardStakingList,
-  cardStakingListEmpty,
-  cardStakingItem,
-  cardStakingItemHead,
-  cardStakingItemInfo,
-  cardStakingItemInfoBlock,
-  cardStakingItemButtons,
-  cardStakingItemDetails,
-  cardStakingItemDetailsHide,
-  cardStakingItemDetailsRow,
-  cardStakingItemDetailsName,
-  cardStakingItemDetailsValue,
-  cardArrowButton,
-  cardArrowButtonActive,
-  cardFooter,
-  cardTatalStaked,
-  cardTatalStakedValue,
-  cardButton,
-  stakeModal,
-  stakeModalTitle,
-  stakeModalInputContainer,
-  stakeModalInput,
-  stakeModalMaxButton,
-  errorMessage,
-  stakeModalBalance,
-  hoverLoader,
-} from './stakingCard.module.scss'
+
+import card from './stakingCard.module.scss'
+import cardWrapper from './stakingCard.module.scss'
+import cardHead from './stakingCard.module.scss'
+import cardHeadLogo from './stakingCard.module.scss'
+import cardLabel from './stakingCard.module.scss'
+import cardInfoText from './stakingCard.module.scss'
+import cardName from './stakingCard.module.scss'
+import cardNameText from './stakingCard.module.scss'
+import cardStakingConditions from './stakingCard.module.scss'
+import cardStakingConditionsItem from './stakingCard.module.scss'
+import cardStakingList from './stakingCard.module.scss'
+import cardStakingListEmpty from './stakingCard.module.scss'
+import cardStakingItem from './stakingCard.module.scss'
+import cardStakingItemHead from './stakingCard.module.scss'
+import cardStakingItemInfo from './stakingCard.module.scss'
+import cardStakingItemInfoBlock from './stakingCard.module.scss'
+import cardStakingItemButtons from './stakingCard.module.scss'
+import cardStakingItemDetails from './stakingCard.module.scss'
+import cardStakingItemDetailsHide from './stakingCard.module.scss'
+import cardStakingItemDetailsRow from './stakingCard.module.scss'
+import cardStakingItemDetailsName from './stakingCard.module.scss'
+import cardStakingItemDetailsValue from './stakingCard.module.scss'
+import cardArrowButton from './stakingCard.module.scss'
+import cardArrowButtonActive from './stakingCard.module.scss'
+import cardFooter from './stakingCard.module.scss'
+import cardTatalStaked from './stakingCard.module.scss'
+import cardTatalStakedValue from './stakingCard.module.scss'
+import cardButton from './stakingCard.module.scss'
+import stakeModal from './stakingCard.module.scss'
+import stakeModalTitle from './stakingCard.module.scss'
+import stakeModalInputContainer from './stakingCard.module.scss'
+import stakeModalInput from './stakingCard.module.scss'
+import stakeModalMaxButton from './stakingCard.module.scss'
+import errorMessage from './stakingCard.module.scss'
+import stakeModalBalance from './stakingCard.module.scss'
+import hoverLoader from './stakingCard.module.scss'
+
 import { Button, Modal, Title, Input, Spinner, TxLoader } from '../'
 import { withFixedStakingApi } from '../../services/staking/FixedStaking'
 

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
-import {
-  cardModal,
-  cardModalTitle,
-  cardModalInputContainer,
-  cardModalInput,
-  cardModalMaxButton,
-  cardModalBalance,
-} from './cardModal.module.scss'
+ 
+import cardModal from './cardModal.module.scss'
+import cardModalTitle from './cardModal.module.scss'
+import cardModalInputContainer from './cardModal.module.scss'
+import cardModalInput from './cardModal.module.scss'
+import cardModalMaxButton from './cardModal.module.scss'
+import cardModalBalance from './cardModal.module.scss'
+
 import { Modal, Title, Button, Input } from '../../'
 
 export function CardModal(props) {

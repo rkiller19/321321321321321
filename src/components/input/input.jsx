@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 
-import { input } from './input.module.scss'
+import input from './input.module.scss'
 
 export function Input({ className, ...props }) {
   const classNames = classnames(input, className)

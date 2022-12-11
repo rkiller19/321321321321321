@@ -1,7 +1,8 @@
 import React from 'react'
 import classnames from 'classnames'
 
-import { button, buttonDisabled } from './button.module.scss'
+import button from './button.module.scss'
+import buttonDisabled from './button.module.scss'
 
 export function Button({ children, type, disabled, className, ...props }) {
   const classNames = classnames(className, button, {

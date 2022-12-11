@@ -2,11 +2,11 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 
 import { openMenuHandler } from '../../actions/menuActions'
-import {
-  header,
-  headerLeftSide,
-  headerBurgerButton,
-} from './header.module.scss'
+
+import header from './header.module.scss'
+import headerLeftSide from './header.module.scss'
+import headerBurgerButton from './header.module.scss'
+
 import { Title, ConnectionStatus } from '../'
 
 export function Header({ title }) {

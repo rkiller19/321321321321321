@@ -1,0 +1,1 @@
+export const stakingCardsContainer: string

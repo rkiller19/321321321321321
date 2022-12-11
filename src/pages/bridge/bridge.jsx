@@ -2,23 +2,23 @@ import React, { useState, useEffect } from 'react'
 import classnames from 'classnames'
 import { utils } from 'ethers'
 
-import {
-  Bridge as BridgeSyled,
-  BridgeTitle,
-  BridgeCard,
-  BridgeCardCol,
-  BridgeInputContainer,
-  BridgeCardNetworks,
-  BridgeCardNetwork,
-  BridgeCardLabel,
-  BridgeCardLabelName,
-  BridgeCardLabelValue,
-  BridgeCardNetworkValue,
-  BridgeButton,
-  BridgeInput,
-  BridgeInputError,
-  ErrorMessage,
-} from './bridge.module.scss'
+
+import BridgeSyled from './bridge.module.scss'
+import BridgeTitle from './bridge.module.scss'
+import BridgeCard from './bridge.module.scss'
+import BridgeCardCol from './bridge.module.scss'
+import BridgeInputContainer from './bridge.module.scss'
+import BridgeCardNetworks from './bridge.module.scss'
+import BridgeCardNetwork from './bridge.module.scss'
+import BridgeCardLabel from './bridge.module.scss'
+import BridgeCardLabelName from './bridge.module.scss'
+import BridgeCardLabelValue from './bridge.module.scss'
+import BridgeCardNetworkValue from './bridge.module.scss'
+import BridgeButton from './bridge.module.scss'
+import BridgeInput from './bridge.module.scss'
+import BridgeInputError from './bridge.module.scss'
+import ErrorMessage from './bridge.module.scss'
+
 import { MainLayout, Title, Button, Input, TxLoader } from '../../components'
 import {
   getBalanceAndAllowance,

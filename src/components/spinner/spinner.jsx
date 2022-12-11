@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { spinner, spinnerInner } from './spinner.module.scss'
+import spinner from './spinner.module.scss'
+import spinnerInner from './spinner.module.scss'
 
 export function Spinner() {
   return (

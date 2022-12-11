@@ -1,7 +1,8 @@
 import React from 'react'
 import { useEthers } from '@usedapp/core'
 
-import { loader, loaderCloseBtn } from './txLoader.module.scss'
+import loader from './txLoader.module.scss'
+import loaderCloseBtn from './txLoader.module.scss'
 import { Spinner, Link } from '../'
 import { shortenTxHash } from '../../utils/shortenTxHash'
 import NetworksConfig from '../../networks.json'
