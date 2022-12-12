@@ -23,7 +23,7 @@ const ConnectWalletPure = ({ activateWallet, deactivateWallet }) => {
 
   useEffect(() => {
     // if connected redirect user to dashboard
-    isConnected && account && history.push('/farming')
+    isConnected && account && history.push('/staking')
   }, [isConnected, account])
 
   return <MainLayout />
