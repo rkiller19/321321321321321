@@ -42,8 +42,8 @@ export function Bridge() {
   const [txHash, setTxHash] = useState()
   const [txErrorMessage, setTxErrorMessage] = useState()
 
-  const InputClassNames = classnames(BridgeInput, {
-    [BridgeInputError]: !!errorMessage,
+  const InputClassNames = classnames(styles.BridgeInput, {
+    [styles.BridgeInputError]: !!errorMessage,
   })
 
   const fetchData = () => {

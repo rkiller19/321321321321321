@@ -16,27 +16,27 @@ export function Title({ level, children, className, ...props }) {
   switch (level) {
     case 1:
       TitleTag = 'h1'
-      levelClassName = h1
+      levelClassName = styles.h1
       break
     case 2:
       TitleTag = 'h2'
-      levelClassName = h2
+      levelClassName = styles.h2
       break
     case 3:
       TitleTag = 'h3'
-      levelClassName = h3
+      levelClassName = styles.h3
       break
     case 4:
       TitleTag = 'h4'
-      levelClassName = h4
+      levelClassName = styles.h4
       break
     case 5:
       TitleTag = 'h5'
-      levelClassName = h5
+      levelClassName = styles.h5
       break
     case 6:
       TitleTag = 'h6'
-      levelClassName = h6
+      levelClassName = styles.h6
       break
     default:
       TitleTag = 'span'

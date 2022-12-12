@@ -46,10 +46,10 @@ function NavLinks({ linksList }) {
 
 export function SidebarNew() {
   const isMenuOpen = useSelector((state) => state.menuReducer.isOpen)
-  const classNames = isMenuOpen ? sidebar : classnames(sidebar, sidebarHidden)
+  const classNames = isMenuOpen ? styles.sidebar : classnames(styles.sidebar, styles.sidebarHidden)
   const backgroundLayesClassNames = isMenuOpen
-    ? sidebarBackgroundLayer
-    : classnames(sidebarBackgroundLayerHidden)
+    ? styles.sidebarBackgroundLayer
+    : classnames(styles.sidebarBackgroundLayerHidden)
 
   const dispatch = useDispatch()
 
@@ -59,8 +59,8 @@ export function SidebarNew() {
 
   return (
     <>
-      <div onClick={closeMenu} className={styles.backgroundLayesClassNames}></div>
-      <div className={styles.classNames}>
+      <div onClick={closeMenu} className={backgroundLayesClassNames}></div>
+      <div className={classNames}>
         <CloseButton onClick={closeMenu} className={styles.closeMenuButton} />
         <div className={styles.sidebarLogo}>
           <img src={Logo} alt="DAO1" />

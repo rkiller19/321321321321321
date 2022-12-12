@@ -6,10 +6,10 @@ import link from './link.module.scss'
 import styles from './link.module.scss'
 
 export function Link({ className, children, ...props }) {
-  const classNames = classnames(className, link)
+  const classNames = classnames(className, styles.link)
 
   return (
-    <a className={styles.classNames} {...props}>
+    <a className={classNames} {...props}>
       {children}
     </a>
   )

@@ -5,7 +5,7 @@ import input from './input.module.scss'
 import styles from './input.module.scss'
 
 export function Input({ className, ...props }) {
-  const classNames = classnames(input, className)
+  const classNames = classnames(styles.input, className)
 
-  return <input className={styles.classNames} {...props} />
+  return <input className={classNames} {...props} />
 }

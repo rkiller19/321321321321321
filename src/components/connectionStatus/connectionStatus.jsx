@@ -32,8 +32,8 @@ function NetworkSwitcher({ deactivateWallet }) {
   const [menuIsVisible, setMenuIsVidible] = useState(false)
   const wrongNetwork = error instanceof UnsupportedChainIdError
 
-  const menuClassNames = classnames(networksMenu, {
-    [networksMenuHidden]: !menuIsVisible,
+  const menuClassNames = classnames(styles.networksMenu, {
+    [styles.networksMenuHidden]: !menuIsVisible,
   })
 
   const selectButtonText = wrongNetwork
@@ -50,7 +50,7 @@ function NetworkSwitcher({ deactivateWallet }) {
         {selectButtonText}
         <img className={styles.networksMenuArrow} src={ArrowDown} alt="Select" />
       </Button>
-      <div className={styles.menuClassNames}>
+      <div className={menuClassNames}>
         Select network
         <div className={styles.networksMenuList}>
           {supportedChains.map((id) => {

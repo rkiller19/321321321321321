@@ -294,19 +294,19 @@ function StakingCardPure({ api, APY }) {
         ) => {
           const isActive = visibleDetailedBlock === idx
           const hiddenClassNames = classnames(
-            cardStakingItemDetails,
-            cardStakingItemDetailsHide,
+            styles.cardStakingItemDetails,
+            styles.cardStakingItemDetailsHide,
           )
           const detailsClassNames = isActive
-            ? cardStakingItemDetails
-            : hiddenClassNames
+            ? styles.cardStakingItemDetails
+            : styles.hiddenClassNames
           const activeArrowClassNames = classnames(
-            cardArrowButton,
-            cardArrowButtonActive,
+            styles.cardArrowButton,
+            styles.cardArrowButtonActive,
           )
           const arrowButtonClassnames = isActive
-            ? activeArrowClassNames
-            : cardArrowButton
+            ? styles.activeArrowClassNames
+            : styles.cardArrowButton
 
           return (
             <div key={idx} className={styles.cardStakingItem}>
