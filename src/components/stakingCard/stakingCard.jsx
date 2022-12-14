@@ -299,13 +299,13 @@ function StakingCardPure({ api, APY }) {
           )
           const detailsClassNames = isActive
             ? styles.cardStakingItemDetails
-            : styles.hiddenClassNames
+            : hiddenClassNames
           const activeArrowClassNames = classnames(
             styles.cardArrowButton,
             styles.cardArrowButtonActive,
           )
           const arrowButtonClassnames = isActive
-            ? styles.activeArrowClassNames
+            ? activeArrowClassNames
             : styles.cardArrowButton
 
           return (
@@ -342,14 +342,14 @@ function StakingCardPure({ api, APY }) {
                   </Button>
                   <button
                     onClick={() => accordionClickHandler(idx)}
-                    className={styles.arrowButtonClassnames}
+                    className={arrowButtonClassnames}
                   >
                     <img src={ArrowIcon} alt="Arrow" />
                   </button>
                 </div>
               </div>
 
-              <div className={styles.detailsClassNames}>
+              <div className={detailsClassNames}>
                 {details &&
                   details.map(({ name, value }, idx) => (
                     <div key={idx} className={styles.cardStakingItemDetailsRow}>
@@ -451,10 +451,7 @@ function StakingCardPure({ api, APY }) {
             <div className={styles.cardLabel}>Staking/unstaking FEE</div>
             <div className={styles.cardInfoText}>0.5%</div>
           </div>
-          <div className={styles.cardStakingConditionsItem}>
-            <div className={styles.cardLabel}>Early unstaking FEE</div>
-            <div className={styles.cardInfoText}>15%</div>
-          </div>
+        
         </div>
 
         <div className={styles.cardStakingList}>

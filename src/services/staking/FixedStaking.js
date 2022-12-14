@@ -86,10 +86,7 @@ export function withFixedStakingApi(Component) {
               //   value: formatDate(endTime, true),
               // },
               { name: 'Staked amount', value: stakedAmount },
-              {
-                name: 'Fee for early (before expire) unstake',
-                value: '15%',
-              },
+            
               // {
               //   name: 'Total yield (for entire period)',
               //   value: `1.55% or ${totalYield} DAO1`,
@@ -104,10 +101,7 @@ export function withFixedStakingApi(Component) {
               //   name: 'Harvestable now (available for withdrawal)',
               //   value: harvestableYield,
               // },
-              {
-                name: 'Last harvest time',
-                value: formatDate(lastHarvestTime, true),
-              },
+            
             ],
           }
         })

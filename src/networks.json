@@ -4,11 +4,11 @@
     "name": "ARBITRUM",
     "fixedStakingContracts": [
       {
-        "address": "0x457F12330f5e04c70b8773637B70c23C6A515b42",
+        "address": "0xC55B3Ff30433ceFC4A8B5A77dD7A6DDa8B4943F4",
         "APY": "20.2705"
       }
     ],
-    "tokenContract": "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70",
+    "tokenContract": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
     "bridgeContract": "0xFF01b75f2c155dBDA36E68eB6557DEE8d36D6A99",
     "params": {
       "chainId": "42161",
@@ -25,32 +25,6 @@
         "https://arbiscan.io/"
       ]
     }
-  },
-  "43114": {
-    "blockExplorer": "https://snowtrace.io/",
-    "name": "AVAX",
-    "fixedStakingContracts": [
-      {
-        "address": "0x457F12330f5e04c70b8773637B70c23C6A515b42",
-        "APY": "20.2705"
-      }
-    ],
-    "tokenContract": "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70",
-    "bridgeContract": "0xFF01b75f2c155dBDA36E68eB6557DEE8d36D6A99",
-    "params": {
-      "chainId": "43114",
-      "chainName": "AVAX",
-      "nativeCurrency": {
-        "name": "AVAX",
-        "symbol": "AVAX",
-        "decimals": 18
-      },
-      "rpcUrls": [
-        "https://api.avax.network/ext/bc/C/rpc"
-      ],
-      "blockExplorerUrls": [
-        "https://snowtrace.io/"
-      ]
-    }
   }
+  
 }
