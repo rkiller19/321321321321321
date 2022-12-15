@@ -1,12 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
 import classnames from 'classnames'
 
 import CoinsIcon from '../../assets/coins-red.png'
 import PickIcon from '../../assets/pick-grey.png'
 import Logo from '../../assets/white-logo.png'
- 
+import DaiLogo from '../../assets/dailogo.png'
+import EthLogo from '../../assets/ethlogo.png'
+import GXPLogo from '../../assets/gxplogo.png'
 import sidebar from './sidebarNew.module.scss'
 import sidebarBackgroundLayer from './sidebarNew.module.scss'
 import sidebarBackgroundLayerHidden from './sidebarNew.module.scss'
@@ -63,11 +66,14 @@ export function SidebarNew() {
       <div className={classNames}>
         <CloseButton onClick={closeMenu} className={styles.closeMenuButton} />
         <div className={styles.sidebarLogo}>
-          <img src={Logo} alt="DAO1" />
+        <a  href="https://www.gxpprotocol.com/" target="_blank"> <img src={Logo} alt="Galaxy Protocol" /></a>
         </div>
 
         <ul className={styles.sidebarNavList}>
           <NavLinks linksList={linksList} />
+          <li className={styles.sidebarNavLink}> <img src={DaiLogo} alt="#" /><Link className={styles.sidebarNavLink} to={{ pathname: "https://daistaking.gxpprotocol.com/" }} target="_blank">DAI</Link></li>
+          <li className={styles.sidebarNavLink}> <img src={EthLogo} alt="#" /><Link className={styles.sidebarNavLink} to={{ pathname: "https://wethstaking.gxpprotocol.com/" }} target="_blank">wETH</Link></li>
+          <li className={styles.sidebarNavLink}> <img src={GXPLogo} alt="#" /><Link className={styles.sidebarNavLink} to={{ pathname: "https://gxpstaking.gxpprotocol.com/" }} target="_blank">GXP</Link></li>
         </ul>
       </div>
     </>

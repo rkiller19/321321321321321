@@ -18,7 +18,15 @@
     display: none;
   }
 }
+.img{
+  padding-left: 15px;
 
+}
+
+.img1{
+  padding-left: 15px;
+  padding-right: 25px;
+}
 @media screen and (max-width: $medium-width) {
   .header {
     padding: 0 20px;
