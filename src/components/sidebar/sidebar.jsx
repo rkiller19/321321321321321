@@ -32,7 +32,7 @@ export const Sidebar = () => {
             className="li"
             activeClassName="active-class"
           >
-            Staking
+            Genesis Staking
           </NavLink>
           {/* <NavLink
             exact

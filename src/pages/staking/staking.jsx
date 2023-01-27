@@ -30,7 +30,7 @@ export const Staking = () => {
   }
 
   return (
-    <MainLayout title="Staking">
+    <MainLayout title="Genesis Staking">
       <Content />
     </MainLayout>
   )

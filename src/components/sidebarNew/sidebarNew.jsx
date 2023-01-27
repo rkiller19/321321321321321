@@ -6,10 +6,10 @@ import classnames from 'classnames'
 
 import CoinsIcon from '../../assets/coins-red.png'
 import PickIcon from '../../assets/pick-grey.png'
-import Logo from '../../assets/white-logo.png'
+import Logo from '../../assets/spacelogo.png'
 import DaiLogo from '../../assets/dailogo.png'
 import EthLogo from '../../assets/ethlogo.png'
-import GXPLogo from '../../assets/gxplogo.png'
+import spacelogo from '../../assets/spacelogo.png'
 import sidebar from './sidebarNew.module.scss'
 import sidebarBackgroundLayer from './sidebarNew.module.scss'
 import sidebarBackgroundLayerHidden from './sidebarNew.module.scss'
@@ -27,7 +27,7 @@ import { openMenuHandler } from '../../actions/menuActions'
 import { CloseButton } from '../'
 
 const linksList = [
-  { path: '/staking', exact: true, text: 'Staking', icon: CoinsIcon },
+  { path: '/staking', exact: true, text: 'Genesis Staking', icon: CoinsIcon },
   // { path: '/farming', exact: true, text: 'Farming', icon: PickIcon },
 ]
 
@@ -66,14 +66,13 @@ export function SidebarNew() {
       <div className={classNames}>
         <CloseButton onClick={closeMenu} className={styles.closeMenuButton} />
         <div className={styles.sidebarLogo}>
-        <a  href="https://www.gxpprotocol.com/" target="_blank"> <img src={Logo} alt="Galaxy Protocol" /></a>
+        <a  href="https://www.spacefinancearbi.com/" target="_blank"> <img src={Logo} alt="Space Finance" /></a>
         </div>
 
         <ul className={styles.sidebarNavList}>
           <NavLinks linksList={linksList} />
-          <li className={styles.sidebarNavLink}> <img src={DaiLogo} alt="#" /><Link className={styles.sidebarNavLink} to={{ pathname: "https://daistaking.gxpprotocol.com/" }} target="_blank">DAI</Link></li>
-          <li className={styles.sidebarNavLink}> <img src={EthLogo} alt="#" /><Link className={styles.sidebarNavLink} to={{ pathname: "https://wethstaking.gxpprotocol.com/" }} target="_blank">wETH</Link></li>
-          <li className={styles.sidebarNavLink}> <img src={GXPLogo} alt="#" /><Link className={styles.sidebarNavLink} to={{ pathname: "https://gxpstaking.gxpprotocol.com/" }} target="_blank">GXP</Link></li>
+          <li className={styles.sidebarNavLink}> <img src={DaiLogo} alt="#" /><Link className={styles.sidebarNavLink} to={{ pathname: "https://daistaking.spacefinancearbi.com/" }} target="_blank">DAI</Link></li>
+          <li className={styles.sidebarNavLink}> <img src={EthLogo} alt="#" /><Link className={styles.sidebarNavLink} to={{ pathname: "https://wethstaking.spacefinancearbi.com/" }} target="_blank">wETH</Link></li>
         </ul>
       </div>
     </>

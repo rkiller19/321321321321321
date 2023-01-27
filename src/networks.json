@@ -4,7 +4,7 @@
     "name": "ARBITRUM",
     "fixedStakingContracts": [
       {
-        "address": "0xC55B3Ff30433ceFC4A8B5A77dD7A6DDa8B4943F4",
+        "address": "0xbc7AA857A660CD0531Ac27ba252bB567a024747f",
         "APY": "20.2705"
       }
     ],
@@ -19,12 +19,11 @@
         "decimals": 18
       },
       "rpcUrls": [
-        "https://1rpc.io/arb"
+        "https://arb1.arbitrum.io/rpc"
       ],
       "blockExplorerUrls": [
         "https://arbiscan.io/"
       ]
     }
   }
-  
 }
