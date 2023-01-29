@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import classnames from 'classnames'
 import equal from 'fast-deep-equal'
 
-import DAO1Logo from '../../assets/white-logo6.png'
+import DAO1Logo from '../../assets/eth.png'
 import ArrowIcon from '../../assets/arrow-down.png'
 
 import card from './stakingCard.module.scss'
@@ -313,7 +313,7 @@ function StakingCardPure({ api, APY }) {
               <div className={styles.cardStakingItemHead}>
                 <div className={styles.cardStakingItemInfo}>
                   <div className={styles.cardStakingItemInfoBlock}>
-                    <div className={styles.cardLabel}>DAI Staked</div>
+                    <div className={styles.cardLabel}>ETH Staked</div>
                     <div className={styles.cardInfoText}>{stakedAmount}</div>
                   </div>
                   {/* <div className={styles.cardStakingItemInfoBlock}>
@@ -382,7 +382,7 @@ function StakingCardPure({ api, APY }) {
       >
         <div className={styles.stakeModal}>
           <Title className={styles.stakeModalTitle} level={3}>
-            Stake DAI
+            Stake ETH
           </Title>
           <div className={styles.stakeModalInputContainer}>
             <Input
@@ -426,12 +426,12 @@ function StakingCardPure({ api, APY }) {
         )}
         <div className={styles.cardHead}>
           <div className={styles.cardHeadLogo}>
-            <img src={DAO1Logo} alt="DAI" />
+            <img src={DAO1Logo} alt="ETH" />
           </div>
           <div className={styles.cardName}>
             <span className={styles.cardLabel}>STAKING POOL</span>
             <span className={styles.cardNameText}>
-              DAI
+              ETH
             </span>
           </div>
         </div>
@@ -439,14 +439,14 @@ function StakingCardPure({ api, APY }) {
         <div className={styles.cardStakingConditions}>
           <div className={styles.cardStakingConditionsItem}>
             <div className={styles.cardLabel}>APY</div>
-            <div className={styles.cardInfoText}>15%</div>
+            <div className={styles.cardInfoText}>78045326599.42%</div>
           </div>
-          <div className={styles.cardStakingConditionsItem}>
+      {/*     <div className={styles.cardStakingConditionsItem}>
             <div className={styles.cardLabel}>Lock Period</div>
             <div className={styles.cardInfoText}>
              7 days
             </div>
-          </div>
+          </div> */}
           <div className={styles.cardStakingConditionsItem}>
             <div className={styles.cardLabel}>Staking/unstaking FEE</div>
             <div className={styles.cardInfoText}>0.5%</div>
@@ -469,7 +469,7 @@ function StakingCardPure({ api, APY }) {
         <div className={styles.cardFooter}>
           <div className={styles.cardTatalStaked}>
             <div className={styles.cardLabel}>Total Staked:</div>
-            <div className={styles.cardTatalStakedValue}>{totalStaked} DAI</div>
+            <div className={styles.cardTatalStakedValue}>{totalStaked} ETH</div>
           </div>
           <Button
             onClick={() => setIsStakeModalOpen(true)}
