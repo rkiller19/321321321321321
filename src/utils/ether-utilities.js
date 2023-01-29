@@ -2,7 +2,7 @@ import { ethers } from 'ethers'
 
 export function formatAttoToToken(amount) {
   const number = ethers.utils.formatUnits(amount, 18).toString()
-  const decimals = 4
+  const decimals = 6
   let counter = 0
   let result = ''
 
