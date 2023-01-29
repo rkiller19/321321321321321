@@ -313,7 +313,7 @@ function StakingCardPure({ api, APY }) {
               <div className={styles.cardStakingItemHead}>
                 <div className={styles.cardStakingItemInfo}>
                   <div className={styles.cardStakingItemInfoBlock}>
-                    <div className={styles.cardLabel}>ETH Staked</div>
+                    <div className={styles.cardLabel}>wETH Staked</div>
                     <div className={styles.cardInfoText}>{stakedAmount}</div>
                   </div>
                   {/* <div className={styles.cardStakingItemInfoBlock}>
@@ -382,7 +382,7 @@ function StakingCardPure({ api, APY }) {
       >
         <div className={styles.stakeModal}>
           <Title className={styles.stakeModalTitle} level={3}>
-            Stake ETH
+            Stake wETH
           </Title>
           <div className={styles.stakeModalInputContainer}>
             <Input
@@ -431,7 +431,7 @@ function StakingCardPure({ api, APY }) {
           <div className={styles.cardName}>
             <span className={styles.cardLabel}>STAKING POOL</span>
             <span className={styles.cardNameText}>
-              ETH
+              wETH
             </span>
           </div>
         </div>
@@ -469,7 +469,7 @@ function StakingCardPure({ api, APY }) {
         <div className={styles.cardFooter}>
           <div className={styles.cardTatalStaked}>
             <div className={styles.cardLabel}>Total Staked:</div>
-            <div className={styles.cardTatalStakedValue}>{totalStaked} ETH</div>
+            <div className={styles.cardTatalStakedValue}>{totalStaked} wETH</div>
           </div>
           <Button
             onClick={() => setIsStakeModalOpen(true)}
