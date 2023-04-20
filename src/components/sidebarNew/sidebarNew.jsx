@@ -66,7 +66,7 @@ export function SidebarNew() {
       <div className={classNames}>
         <CloseButton onClick={closeMenu} className={styles.closeMenuButton} />
         <div className={styles.sidebarLogo}>
-        <a  href="https://www.spacefinancearbi.com/" target="_blank"> <img src={Logo} alt="Space Finance" /></a>
+        <a  href="https://www.spacefinancearbi.com/" target="_blank"> <img src={Logo} alt="AISHIB" /></a>
         </div>
 
         <ul className={styles.sidebarNavList}>

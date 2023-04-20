@@ -4,11 +4,11 @@
     "name": "ARBITRUM",
     "fixedStakingContracts": [
       {
-        "address": "0x9C73C5Bf623ec55732EBCd5DcFaa1f89d143C4e4",
+        "address": "0x16B42110A38B79a76977e5F27292DF2889E06F20",
         "APY": "20.2705"
       }
     ],
-    "tokenContract": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+    "tokenContract": "0x39DB3C6d55b12ADfeF933466069406E692df83c0",
     "bridgeContract": "0xFF01b75f2c155dBDA36E68eB6557DEE8d36D6A99",
     "params": {
       "chainId": "42161",

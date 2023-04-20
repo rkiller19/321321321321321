@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import classnames from 'classnames'
 import equal from 'fast-deep-equal'
 
-import DAO1Logo from '../../assets/eth.png'
+import DAO1Logo from '../../assets/white-logo8.png'
 import ArrowIcon from '../../assets/arrow-down.png'
 
 import card from './stakingCard.module.scss'
@@ -313,7 +313,7 @@ function StakingCardPure({ api, APY }) {
               <div className={styles.cardStakingItemHead}>
                 <div className={styles.cardStakingItemInfo}>
                   <div className={styles.cardStakingItemInfoBlock}>
-                    <div className={styles.cardLabel}>wETH Staked</div>
+                    <div className={styles.cardLabel}>AISHIB Staked</div>
                     <div className={styles.cardInfoText}>{stakedAmount}</div>
                   </div>
                   {/* <div className={styles.cardStakingItemInfoBlock}>
@@ -382,7 +382,7 @@ function StakingCardPure({ api, APY }) {
       >
         <div className={styles.stakeModal}>
           <Title className={styles.stakeModalTitle} level={3}>
-            Stake wETH
+            Stake AISHIB
           </Title>
           <div className={styles.stakeModalInputContainer}>
             <Input
@@ -430,8 +430,8 @@ function StakingCardPure({ api, APY }) {
           </div>
           <div className={styles.cardName}>
             <span className={styles.cardLabel}>STAKING POOL</span>
-            <span className={styles.cardNameText}>
-              wETH
+            <span className={styles.cardNameText} >
+              AISHIB
             </span>
           </div>
         </div>
@@ -469,7 +469,7 @@ function StakingCardPure({ api, APY }) {
         <div className={styles.cardFooter}>
           <div className={styles.cardTatalStaked}>
             <div className={styles.cardLabel}>Total Staked:</div>
-            <div className={styles.cardTatalStakedValue}>{totalStaked} wETH</div>
+            <div className={styles.cardTatalStakedValue}>{totalStaked} AISHIB</div>
           </div>
           <Button
             onClick={() => setIsStakeModalOpen(true)}
