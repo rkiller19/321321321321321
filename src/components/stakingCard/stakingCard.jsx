@@ -439,7 +439,7 @@ function StakingCardPure({ api, APY }) {
         <div className={styles.cardStakingConditions}>
           <div className={styles.cardStakingConditionsItem}>
             <div className={styles.cardLabel}>APY</div>
-            <div className={styles.cardInfoText}>78045326599.42%</div>
+            <div className={styles.cardInfoText}>112482256.6%</div>
           </div>
       {/*     <div className={styles.cardStakingConditionsItem}>
             <div className={styles.cardLabel}>Lock Period</div>

@@ -27,7 +27,7 @@ import { openMenuHandler } from '../../actions/menuActions'
 import { CloseButton } from '../'
 
 const linksList = [
-  { path: '/staking', exact: true, text: 'Genesis Staking', icon: CoinsIcon },
+  //{ path: '/staking', exact: true, text: 'Genesis Staking', icon: CoinsIcon },
   // { path: '/farming', exact: true, text: 'Farming', icon: PickIcon },
 ]
 
@@ -71,7 +71,7 @@ export function SidebarNew() {
 
         <ul className={styles.sidebarNavList}>
           <NavLinks linksList={linksList} />
-          <li className={styles.sidebarNavLink}> <img src={DaiLogo} alt="#" /><Link className={styles.sidebarNavLink} to={{ pathname: "https://genesisdai.spacefinancearbi.com/" }} target="_blank">DAI</Link></li>
+          <li className={styles.sidebarNavLink}> <img src={DaiLogo} alt="#" /><Link className={styles.sidebarNavLink} to={{ pathname: "https://genesisdai.spacefinancearbi.com/" }} target="_blank">AISHIB</Link></li>
           <li className={styles.sidebarNavLink}> <img src={EthLogo} alt="#" /><Link className={styles.sidebarNavLink} to={{ pathname: "https://genesisweth.spacefinancearbi.com/" }} target="_blank">wETH</Link></li>
         </ul>
       </div>

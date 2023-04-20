@@ -4,7 +4,7 @@
     "name": "ARBITRUM",
     "fixedStakingContracts": [
       {
-        "address": "0x343DF7F1FE135f9F5aEf3C23E83661BE0711c410",
+        "address": "0x9C73C5Bf623ec55732EBCd5DcFaa1f89d143C4e4",
         "APY": "20.2705"
       }
     ],

@@ -9,7 +9,7 @@
   position: center;
   box-shadow: 0px 5px 20px rgba(37, 37, 37, 0.05);
   border-radius: 10px;
-  background-color: #AE98D7;
+  background-color: #F9B14E;
   padding: 24px 20px;
 
   &Head {
@@ -18,7 +18,7 @@
 
     &Logo {
       padding: 11px;
-      border: 1px solid $light-text;
+      border: 1px solid black;
       border-radius: 1px;
       display: flex;
       align-items: center;
@@ -30,10 +30,13 @@
   }
 
   &Label {
-    color: $light-text;
+    color: $main-text;
     font-size: 13px;
     margin-bottom: 2px;
   }
+  
+  
+
 
   &InfoText {
     color: $main-text;
@@ -83,7 +86,7 @@
         padding: 10px;
         font-size: 13px;
         text-align: center;
-        color: $main-text;
+        color: white;
         border-bottom: 1px solid $light-bg;
       }
     }
@@ -120,7 +123,7 @@
         background-color: $light-bg;
         padding: 20px;
         font-size: 13px;
-        color: $light-text;
+        color: $main-text;
 
         &Hide {
           padding: 0;
@@ -197,6 +200,7 @@
 
   &Input {
     flex: 1 1 auto;
+    color: white;
 
     &Container {
       display: flex;
@@ -217,7 +221,7 @@
 
 .errorMessage {
   margin-top: 5px;
-  color: $red;
+  color: white;
   font-size: 12px;
 }
 
